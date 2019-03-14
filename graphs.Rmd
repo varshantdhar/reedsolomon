@@ -1,0 +1,19 @@
+---
+title: "graphs"
+author: "Varshant Dhar"
+date: "3/14/2019"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r, echo=TRUE}
+dat <- read.csv(file = 'test.csv')
+errorRate <- as.vector(dat[1] / dat[2])
+strLen <- as.vector(dat[3])
+plot(strLen$X10, errorRate$X20, xlab="Length of String (Characters)", ylab = "Error Rate", pch=16)
+abline(h = 0, v = 0, col = "red")
+```      
